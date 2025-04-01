@@ -1,15 +1,12 @@
-/* Body and background settings */
 body {
     background-color: #000000;
-    /* Main background color */
     color: #ffffff;
-    /* White text color for contrast */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Preloader Styles */
+
 .container {
     position: fixed;
     top: 0;
@@ -20,7 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    /* Black background */
     z-index: 9999;
     opacity: 1;
     animation: fadeOutLogo 6s forwards;
@@ -33,7 +29,6 @@ body {
     position: relative;
     clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
     border: 4px solid #0077FF;
-    /* Blue border */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,13 +40,11 @@ body {
     font-size: 50px;
     font-weight: bold;
     color: #0077FF;
-    /* Blue color for the letter */
     text-align: center;
     opacity: 0;
     animation: fadeIn 2s 2s forwards;
 }
 
-/* Animation for rotating shield */
 @keyframes rotateShape {
     0% {
         transform: rotate(0deg) scale(0);
@@ -64,7 +57,6 @@ body {
     }
 }
 
-/* Fade-in for the letter "M" */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -75,7 +67,6 @@ body {
     }
 }
 
-/* Fade-out effect for the preloader */
 @keyframes fadeOutLogo {
     0% {
         opacity: 1;
@@ -110,7 +101,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: #0a192f;
-    /* Dark Gray for header */
+
 }
 
 .logo {
@@ -126,7 +117,6 @@ header {
     position: relative;
     clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
     border: 4px solid #0077FF;
-    /* Blue border */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,19 +131,17 @@ nav ul {
 
 nav ul li a {
     color: #ccd6f6;
-    /* Light blue-gray for links */
     text-decoration: none;
 }
 
 .resume-btn {
     color: #3B82F6;
-    /* Light teal color for resume button */
     border: 1px solid #3B82F6;
     padding: 10px 15px;
     text-decoration: none;
 }
 
-/* Hero section */
+
 .hero {
     text-align: center;
     margin-top: 100px;
@@ -161,7 +149,7 @@ nav ul li a {
 
 .hero p {
     color: #3B82F6;
-    /* Light teal for the text */
+
 }
 
 .hero h1 {
@@ -172,12 +160,10 @@ nav ul li a {
 .hero h2 {
     font-size: 36px;
     color: #8892b0;
-    /* Soft grayish-blue for subheading */
 }
 
 .description {
     color: #a8b2d1;
-    /* Light grayish-blue */
     max-width: 600px;
     margin: 20px auto;
 }
@@ -188,7 +174,6 @@ nav ul li a {
     padding: 12px 24px;
     background-color: transparent;
     border: 1px solid #3B82F6;
-    /* Light teal border for CTA button */
     color: #3B82F6;
     text-decoration: none;
     font-size: 18px;
@@ -197,7 +182,6 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect */
 .cta-btn:hover {
     background-color: #3B82F6;
     color: #ffffff;
@@ -206,12 +190,9 @@ nav ul li a {
 
 #about {
     background-color: #000000;
-    /* Black background */
     color: #ffffff;
-    /* White text for contrast */
     padding: 80px 20px;
     margin-top: 100px;
-    /* Pushes the section lower */
 }
 
 .about-container {
@@ -222,28 +203,24 @@ nav ul li a {
     margin: auto;
     gap: 30px;
     flex-direction: row;
-    /* Ensures image is on the left */
 }
 
 .image-container {
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    /* Align image to the left */
 }
 
 .styled-image {
     width: 350px;
     height: 350px;
     border-radius: 0;
-    /* Square shape */
     border: 4px solid transparent;
     object-fit: cover;
     box-shadow: 0 0 10px #0077FF;
     animation: neonFlicker 1.5s infinite alternate;
 }
 
-/* Neon Flickering Effect */
 @keyframes neonFlicker {
     0% {
         box-shadow: 0 0 10px #0077FF, 0 0 20px #0077FF;
@@ -266,21 +243,17 @@ nav ul li a {
 .about-text h2 {
     font-size: 32px;
     color: #0077FF;
-    /* Primary blue color */
 }
 
 .about-text p {
     font-size: 16px;
     line-height: 1.6;
     color: #cccccc;
-    /* Light gray text */
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        /* Stack on small screens */
         text-align: center;
     }
 
@@ -301,10 +274,8 @@ nav ul li a {
 /* Education Section */
 #education {
     background-color: #0a192f;
-    /* Dark navy background */
     padding: 80px 20px;
     color: #ffffff;
-    /* White text */
     text-align: center;
 }
 
@@ -316,7 +287,6 @@ nav ul li a {
 .education-container h2 {
     font-size: 32px;
     color: #0077FF;
-    /* Primary blue */
     margin-bottom: 40px;
 }
 
@@ -325,7 +295,6 @@ nav ul li a {
     align-items: center;
     gap: 20px;
     background-color: #1c2a48;
-    /* Slightly lighter blue */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px #0077FF;
@@ -343,18 +312,15 @@ nav ul li a {
 .edu-text h3 {
     font-size: 24px;
     color: #64ffda;
-    /* Secondary shade */
     margin: 0;
 }
 
 .edu-text p {
     font-size: 16px;
     color: #ccd6f6;
-    /* Light blue-gray */
     margin: 5px 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .education-entry {
         flex-direction: column;
@@ -367,7 +333,6 @@ nav ul li a {
     }
 }
 
-/* Resume Button Styling */
 .resume-container {
     text-align: center;
     margin-top: 30px;
@@ -439,9 +404,7 @@ nav ul li a {
 /* Projects Section */
 #projects {
     background-color: #000000;
-    /* Black background */
     color: #ffffff;
-    /* White text */
     padding: 80px 20px;
     text-align: center;
 }
@@ -454,11 +417,9 @@ nav ul li a {
 .projects-container h2 {
     font-size: 32px;
     color: #0077FF;
-    /* Primary blue color */
     margin-bottom: 20px;
 }
 
-/* Project Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -466,10 +427,8 @@ nav ul li a {
     margin-top: 40px;
 }
 
-/* Project Cards */
 .project-card {
     background-color: #0a192f;
-    /* Dark navy */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px #0077FF;
@@ -483,18 +442,15 @@ nav ul li a {
 
 .project-card h3 {
     color: #3B82F6;
-    /* Light blue */
     font-size: 24px;
 }
 
 .project-card p {
     font-size: 16px;
     color: #cccccc;
-    /* Light gray text */
     margin: 10px 0;
 }
 
-/* Project Links */
 .project-links {
     margin-top: 15px;
 }
@@ -502,30 +458,27 @@ nav ul li a {
 .project-links a {
     text-decoration: none;
     color: #64ffda;
-    /* Light greenish-blue */
     margin-right: 15px;
     font-weight: bold;
 }
 
 .project-links a:hover {
     color: #f76c6c;
-    /* Soft orange for hover effect */
+
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        /* Single column on smaller screens */
+
     }
 }
 
 /* Contact Section */
 #contact {
     background-color: #000000;
-    /* Black background */
     color: #ffffff;
-    /* White text */
     padding: 80px 20px;
     text-align: center;
 }
@@ -538,18 +491,16 @@ nav ul li a {
 .contact-container h2 {
     font-size: 32px;
     color: #0077FF;
-    /* Primary blue */
     margin-bottom: 20px;
 }
 
 .contact-container p {
     font-size: 16px;
     color: #cccccc;
-    /* Light gray */
     margin-bottom: 30px;
 }
 
-/* Contact Form */
+
 .input-group {
     margin-bottom: 15px;
 }
@@ -586,7 +537,6 @@ nav ul li a {
     color: #ffffff;
 }
 
-/* Contact Links */
 .contact-links {
     margin-top: 30px;
 }
@@ -600,57 +550,11 @@ nav ul li a {
 
 .contact-links a:hover {
     color: #f76c6c;
-    /* Soft orange */
+
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .contact-container {
         width: 90%;
     }
-}
-
-
-
-
-
-
-
-/* Add shades of blue */
-.primary-shade {
-    color: #0077FF;
-}
-
-.secondary-shade {
-    color: #64ffda;
-}
-
-.background-shade {
-    background-color: #0a192f;
-    /* Slightly lighter blackish-blue */
-}
-
-.light-blue-shade {
-    color: #ccd6f6;
-    /* Very light blue text */
-}
-
-.off-white-shade {
-    background-color: #f7f7f7;
-    /* Light off-white background */
-}
-
-.dark-navy-shade {
-    background-color: #172a45;
-    /* Dark navy background */
-}
-
-.orange-accent {
-    color: #f76c6c;
-    /* Soft orange for highlights */
-}
-
-.golden-yellow-accent {
-    color: #f1c40f;
-    /* Golden yellow for attention-grabbing elements */
 }
