@@ -1,0 +1,656 @@
+/* Body and background settings */
+body {
+    background-color: #000000;
+    /* Main background color */
+    color: #ffffff;
+    /* White text color for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Preloader Styles */
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    /* Black background */
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOutLogo 6s forwards;
+}
+
+.shield {
+    width: 150px;
+    height: 180px;
+    background: transparent;
+    position: relative;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
+    border: 4px solid #0077FF;
+    /* Blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateShape 2s ease-in-out forwards;
+}
+
+.letter {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    color: #0077FF;
+    /* Blue color for the letter */
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s 2s forwards;
+}
+
+/* Animation for rotating shield */
+@keyframes rotateShape {
+    0% {
+        transform: rotate(0deg) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade-in for the letter "M" */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-out effect for the preloader */
+@keyframes fadeOutLogo {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Homepage content */
+.homepage-content {
+    opacity: 0;
+    animation: fadeInHomepage 2s 6s forwards;
+}
+
+@keyframes fadeInHomepage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0a192f;
+    /* Dark Gray for header */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shield-logo {
+    width: 60px;
+    height: 75px;
+    background: transparent;
+    position: relative;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
+    border: 4px solid #0077FF;
+    /* Blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    color: #ccd6f6;
+    /* Light blue-gray for links */
+    text-decoration: none;
+}
+
+.resume-btn {
+    color: #3B82F6;
+    /* Light teal color for resume button */
+    border: 1px solid #3B82F6;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero p {
+    color: #3B82F6;
+    /* Light teal for the text */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #8892b0;
+    /* Soft grayish-blue for subheading */
+}
+
+.description {
+    color: #a8b2d1;
+    /* Light grayish-blue */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 1px solid #3B82F6;
+    /* Light teal border for CTA button */
+    color: #3B82F6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.cta-btn:hover {
+    background-color: #3B82F6;
+    color: #ffffff;
+    box-shadow: 0 0 10px #3B82F6;
+}
+
+#about {
+    background-color: #000000;
+    /* Black background */
+    color: #ffffff;
+    /* White text for contrast */
+    padding: 80px 20px;
+    margin-top: 100px;
+    /* Pushes the section lower */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    gap: 30px;
+    flex-direction: row;
+    /* Ensures image is on the left */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    /* Align image to the left */
+}
+
+.styled-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 0;
+    /* Square shape */
+    border: 4px solid transparent;
+    object-fit: cover;
+    box-shadow: 0 0 10px #0077FF;
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+/* Neon Flickering Effect */
+@keyframes neonFlicker {
+    0% {
+        box-shadow: 0 0 10px #0077FF, 0 0 20px #0077FF;
+    }
+
+    50% {
+        box-shadow: 0 0 15px #3B82F6, 0 0 25px #3B82F6;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #0077FF, 0 0 20px #0077FF;
+    }
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #0077FF;
+    /* Primary blue color */
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+    /* Light gray text */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        /* Stack on small screens */
+        text-align: center;
+    }
+
+    .image-container {
+        justify-content: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .styled-image {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Education Section */
+#education {
+    background-color: #0a192f;
+    /* Dark navy background */
+    padding: 80px 20px;
+    color: #ffffff;
+    /* White text */
+    text-align: center;
+}
+
+.education-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.education-container h2 {
+    font-size: 32px;
+    color: #0077FF;
+    /* Primary blue */
+    margin-bottom: 40px;
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #1c2a48;
+    /* Slightly lighter blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0077FF;
+}
+
+.edu-icon img {
+    width: 30px;
+    height: 40px;
+}
+
+.edu-text {
+    text-align: left;
+}
+
+.edu-text h3 {
+    font-size: 24px;
+    color: #64ffda;
+    /* Secondary shade */
+    margin: 0;
+}
+
+.edu-text p {
+    font-size: 16px;
+    color: #ccd6f6;
+    /* Light blue-gray */
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .edu-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Resume Button Styling */
+.resume-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077FF;
+    border: 2px solid #0077FF;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.resume-btn:hover {
+    background-color: #0077FF;
+    color: #ffffff;
+    box-shadow: 0 0 15px #0077FF;
+}
+
+/* Interests Section */
+.interests-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.interests-container h2 {
+    font-size: 28px;
+    color: #0077FF;
+    margin-bottom: 20px;
+}
+
+.interests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.interest-item {
+    background-color: #0a192f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.interest-item:hover {
+    transform: scale(1.05);
+}
+
+.interest-item h3 {
+    font-size: 22px;
+    color: #0077FF;
+    margin-bottom: 5px;
+}
+
+.interest-item p {
+    font-size: 16px;
+    color: #ccd6f6;
+}
+
+
+/* Projects Section */
+#projects {
+    background-color: #000000;
+    /* Black background */
+    color: #ffffff;
+    /* White text */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.projects-container h2 {
+    font-size: 32px;
+    color: #0077FF;
+    /* Primary blue color */
+    margin-bottom: 20px;
+}
+
+/* Project Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #0a192f;
+    /* Dark navy */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0077FF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #3B82F6;
+}
+
+.project-card h3 {
+    color: #3B82F6;
+    /* Light blue */
+    font-size: 24px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #cccccc;
+    /* Light gray text */
+    margin: 10px 0;
+}
+
+/* Project Links */
+.project-links {
+    margin-top: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #64ffda;
+    /* Light greenish-blue */
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    color: #f76c6c;
+    /* Soft orange for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
+    }
+}
+
+/* Contact Section */
+#contact {
+    background-color: #000000;
+    /* Black background */
+    color: #ffffff;
+    /* White text */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    color: #0077FF;
+    /* Primary blue */
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    font-size: 16px;
+    color: #cccccc;
+    /* Light gray */
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #0077FF;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: 2px solid #0077FF;
+    color: #0077FF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0077FF;
+    color: #ffffff;
+}
+
+/* Contact Links */
+.contact-links {
+    margin-top: 30px;
+}
+
+.contact-links a {
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.contact-links a:hover {
+    color: #f76c6c;
+    /* Soft orange */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-container {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+/* Add shades of blue */
+.primary-shade {
+    color: #0077FF;
+}
+
+.secondary-shade {
+    color: #64ffda;
+}
+
+.background-shade {
+    background-color: #0a192f;
+    /* Slightly lighter blackish-blue */
+}
+
+.light-blue-shade {
+    color: #ccd6f6;
+    /* Very light blue text */
+}
+
+.off-white-shade {
+    background-color: #f7f7f7;
+    /* Light off-white background */
+}
+
+.dark-navy-shade {
+    background-color: #172a45;
+    /* Dark navy background */
+}
+
+.orange-accent {
+    color: #f76c6c;
+    /* Soft orange for highlights */
+}
+
+.golden-yellow-accent {
+    color: #f1c40f;
+    /* Golden yellow for attention-grabbing elements */
+}
