@@ -39,7 +39,7 @@ I am continuously improving my skills and learning new technologies. This portfo
 ## 🌐 Live Version
 
 You can view the live version of my portfolio at:  
-[Live Portfolio](https://github.com/Ocheing/My-Portfolio.git)
+[Live Portfolio](https://lovely-vacherin-132bfe.netlify.app/)
 
 ## 💡 Contributions
 
