@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="j.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="letter">M</div>
     </div>
 
-    <!-- Main Content (Initially hidden) -->
+
     <div class="homepage-content">
         <header>
             <div class="logo">
@@ -23,16 +24,36 @@
                     <div class="letter">M</div>
                 </div>
             </div>
+
+
+            <!-- Menu Toggle for Mobile -->
+            <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
+            <label for="menu-toggle-checkbox" class="menu-toggle">☰</label>
+
+
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#Education">Education</a></li>
-                    <li><a href="#Interests">Interests</a></li>
-                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="MILLICENT CV.pdf" class="resume-btn" download>Resume</a>
+
+
+            <!-- Resume Button with Dropdown -->
+            <div class="resume-btn-container">
+                <a href="#" class="resume-btn">Resume</a>
+                <div class="resume-dropdown">
+                    <a href="MILLICENT CV.pdf" target="_blank" class="view-resume">
+                        <i class="fas fa-eye"></i>View
+                    </a>
+                    <a href="MILLICENT CV.pdf" download class="download-resume">
+                        <i class="fas fa-download"></i>Download
+                    </a>
+                </div>
+            </div>
 
         </header>
 
@@ -68,7 +89,7 @@
             </div>
 
             <div class="image-container">
-                <img src="my face.jpg" alt="Profile picture of Millicent Anyango" class="styled-image">
+                <img src="PIC3.jpg" alt="Profile picture of Millicent Anyango" class="styled-image">
             </div>
         </div>
     </section>
@@ -78,7 +99,7 @@
             <h2>Education</h2>
             <div class="education-entry">
                 <div class="edu-icon">
-                    <img src="pic2.jpg" alt="Graduation Cap">
+                    <img src="KISII CAMPUS.jpeg" alt="Graduation Cap">
                 </div>
                 <div class="edu-text">
                     <h3>Bachelor's Degree in Software Engineering</h3>
@@ -88,6 +109,9 @@
             </div>
 
             <div class="education-entry">
+                <div class="edu-icon">
+                    <img src="PLP2.jpeg" alt="PLP">
+                </div>
 
                 <div class="edu-text">
                     <h3>Power Learn Project</h3>
@@ -97,7 +121,7 @@
             </div>
 
             <div class="resume-container">
-                <a href="MILLICENT_CV.pdf" class="resume-btn" download>Download Resume</a>
+                <a href="MILLICENT CV.pdf" class="resume-btn" download>Download Resume</a>
             </div>
         </div>
     </section>
@@ -109,18 +133,48 @@
             <div class="interests-list">
                 <div class="interest-item">
                     <h3>Full-Stack Development</h3>
-                    <p>Building interactive and dynamic web applications from front-end to back-end.</p>
+                    <p>Building interactive and dynamic web applications from front-end to back-end.As I
+                        continue to
+                        learn full-stack development, I am already building web applications using both
+                        front-end and
+                        back-end technologies. <br>I am currently working with HTML, CSS, and JavaScript for
+                        front-end
+                        development, while exploring back-end technologies like Node.js and MongoDB.<br> Through
+                        hands-on experience, I’m honing my skills in responsive design and interactive web
+                        applications
+                        using the MERN stack, constantly improving with each project I work on.</p>
                 </div>
 
                 <div class="interest-item">
                     <h3>UI/UX Design</h3>
-                    <p>Creating user-friendly and aesthetically pleasing interfaces.</p>
+                    <p>I’m focused on learning how to create user-centered, intuitive, and visually appealing
+                        interfaces. <br>I’m diving into design principles, wireframing, prototyping, and user
+                        testing to
+                        understand how design impacts user experience. <br>I am using tools like Figma and Adobe
+                        XD to
+                        design responsive layouts and create seamless user experiences.</p>
                 </div>
 
+                <div class="interest-item">
+                    <h3>Data Analysis</h3>
+                    <p> Diving into data analysis to extract insights that drive decision-making.<br> By
+                        learning tools
+                        like Excel, Python, and SQL, I’m gaining the skills to clean, analyze, and visualize
+                        data.
+                        <br>My goal is to leverage data to solve problems, identify trends, and support business
+                        strategies with informed, data-driven decisions.
+                    </p>
+                </div>
 
                 <div class="interest-item">
                     <h3>Entrepreneurship & Online Business</h3>
-                    <p>Leveraging technology to build sustainable online businesses.</p>
+                    <p>Passionate about entrepreneurship and building online businesses.<br> Currently, I'm
+                        exploring
+                        e-commerce, digital marketing, and using online platforms to grow businesses.<br> My
+                        focus is on
+                        creating value through innovative ideas and efficient models while <br>leveraging AI and
+                        data
+                        analytics to optimize my strategies for sustainable success.</p>
                 </div>
             </div>
         </div>

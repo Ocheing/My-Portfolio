@@ -22,6 +22,7 @@ body {
     animation: fadeOutLogo 6s forwards;
 }
 
+/* Shield (Logo Shape) */
 .shield {
     width: 150px;
     height: 180px;
@@ -35,15 +36,18 @@ body {
     animation: rotateShape 2s ease-in-out forwards;
 }
 
+/* Letter inside the shield */
 .letter {
     position: absolute;
-    font-size: 50px;
+    font-size: 40px;
+    /* Letter size for desktop */
     font-weight: bold;
     color: #0077FF;
     text-align: center;
     opacity: 0;
     animation: fadeIn 2s 2s forwards;
 }
+
 
 @keyframes rotateShape {
     0% {
@@ -78,6 +82,38 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+
+    /* Adjust shield size for tablets */
+    .shield {
+        width: 40vw;
+        height: 40vh;
+    }
+
+    /* Increase letter size for tablets */
+    .letter {
+        font-size: 10vw;
+        /* Adjusted font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjust shield size for mobile */
+    .shield {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    /* Increase letter size for mobile */
+    .letter {
+        font-size: 12vw;
+        /* Adjusted font size for mobile */
+    }
+}
+
+
+
 /* Homepage content */
 .homepage-content {
     opacity: 0;
@@ -94,17 +130,22 @@ body {
     }
 }
 
-/* Header styling */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #0a192f;
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+/* Logo */
+.logo,
+.shield-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,15 +154,11 @@ header {
 .shield-logo {
     width: 60px;
     height: 75px;
-    background: transparent;
-    position: relative;
     clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 50% 100%, 0% 60%, 10% 20%);
     border: 4px solid #0077FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* Navigation Links */
 nav ul {
     list-style: none;
     display: flex;
@@ -132,6 +169,20 @@ nav ul {
 nav ul li a {
     color: #ccd6f6;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #3B82F6;
+    outline: none;
+}
+
+/* Resume Button Styling */
+.resume-btn-container {
+    position: relative;
+    display: inline-block;
 }
 
 .resume-btn {
@@ -139,6 +190,150 @@ nav ul li a {
     border: 1px solid #3B82F6;
     padding: 10px 15px;
     text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for resume button */
+.resume-btn:hover,
+.resume-btn:focus {
+    background-color: #3B82F6;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu Styling */
+.resume-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f2937;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.resume-btn-container:hover .resume-dropdown,
+.resume-btn-container:focus-within .resume-dropdown {
+    display: block;
+}
+
+/* Dropdown items styling */
+.resume-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-bottom: 1px solid #3B82F6;
+    transition: background-color 0.3s ease;
+}
+
+.resume-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.resume-dropdown a:hover,
+.resume-dropdown a:focus {
+    background-color: #3B82F6;
+    color: #ffffff;
+}
+
+/* Links for downloading and viewing resumes */
+.view-resume,
+.download-resume {
+    color: #64ffda;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    padding: 0 12px;
+}
+
+/* Icon spacing in resume links */
+.view-resume i,
+.download-resume i {
+    margin-right: 8px;
+}
+
+/* Hover effects for resume links */
+.view-resume:hover,
+.download-resume:hover {
+    background-color: #0077FF;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+}
+
+
+/* Hide the menu toggle checkbox and button by default */
+.menu-toggle-checkbox,
+.menu-toggle {
+    display: none;
+}
+
+/* Default desktop navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    /* Show the menu icon */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #ffffff;
+        background: none;
+        border: none;
+        margin-right: 30px;
+    }
+
+    /* Hide nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0a192f;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #0077FF;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle-checkbox:checked~nav .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: #ffffff;
+        display: block;
+        width: 90%;
+        padding: 0px;
+        transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+        background-color: #0077FF;
+    }
 }
 
 
@@ -553,8 +748,52 @@ nav ul li a {
 
 }
 
+@media (max-width: 768px) {
+    .contact-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 28px;
+    }
+
+    .contact-container p {
+        font-size: 14px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 600px) {
     .contact-container {
         width: 90%;
+    }
+
+    .contact-container h2 {
+        font-size: 24px;
+    }
+
+    .contact-container p {
+        font-size: 14px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
