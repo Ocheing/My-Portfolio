@@ -39,7 +39,7 @@ I am continuously improving my skills and learning new technologies. This portfo
 ## 🌐 Live Version
 
 You can view the live version of my portfolio at:  
-[Live Portfolio](ocheing-millicent.netlify.app)
+[Live Portfolio]((https://ocheing-millicent.netlify.app/))
 
 ## 💡 Contributions
 
