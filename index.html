@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="j.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -34,7 +36,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#interests">Interests</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -46,206 +48,315 @@
             <div class="resume-btn-container">
                 <a href="#" class="resume-btn">Resume</a>
                 <div class="resume-dropdown">
-                    <a href="MILLICENT CV.pdf" target="_blank" class="view-resume">
+                    <a href="Ocheing Millicent resume.pdf" target="_blank" class="view-resume">
                         <i class="fas fa-eye"></i>View
                     </a>
-                    <a href="MILLICENT CV.pdf" download class="download-resume">
+                    <a href="Ocheing Millicent resume.pdf" download class="download-resume">
                         <i class="fas fa-download"></i>Download
                     </a>
                 </div>
             </div>
 
         </header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="https:/github.com/Ocheing"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com/Mie97250576?t=0oThagPUc0BdfhiEADwu4Q&s=09"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/millicent-anyango-b8b69b29b"><i
+                            class="fab fa-linkedin"></i></a></li>
+                <li class="last-icon"><a href="#"><i class="fab fa-codepen"></i></a></li>
 
+            </ul>
+        </div>
+
+        <div class="email-bar">
+            <div class="email-wrapper">
+                <a href="mailto:millicentanyango999@gmail.com">millicentanyango999@gmail.com</a>
+                <div class="email-line"></div>
+            </div>
+        </div>
+
+        <!-- Hero section -->
         <main>
             <section class="hero">
-                <p>Hi, my name is</p>
+                <p>Hi, I am</p>
                 <h1>Millicent Anyango</h1>
-                <h2>Building the Future of the Web.<br>Im learning to build things for the web.</h2>
-                <p class="description">Aspiring full-stack developer passionate about creating seamless, innovative,
-                    and
-                    user-friendly digital experiences.</p>
+
+                <div class="animated-words-container">
+                    <span class="animated-word">💻 Web Developer</span>
+                    <span class="animated-word">🎨 UI/UX Designer</span>
+                    <span class="animated-word">📊 Data Analyst</span>
+                    <span class="animated-word">📱 App Developer</span>
+                    <span class="animated-word">🚀 Tech Enthusiast</span>
+                </div>
+
+                <h2>Bridging Creativity and Code to <br>Build the Web of Tomorrow.</h2>
+                <p class="description"> I’m an aspiring full-stack developer driven by curiosity and creativity —<br>
+                    building intuitive, powerful, and modern digital experiences that solve real-world problems.</p>
+
+                <div class="education-toggle">
+                    <h3 onclick="toggleEducation()">
+                        Education <span id="toggle-icon">+</span>
+                    </h3>
+                    <div id="education-content" class="education-content">
+                        <p><strong>PLP Academy</strong><br>
+                            Software Engineering (Fullstack MERN)<br>
+                            February 2025 – Present</p>
+                        <p><strong>FreeCodeCamp</strong><br>
+                            Data Analysis with Python<br>
+                            April 2025 – Present</p>
+                        <p><strong>Kisii University</strong><br>
+                            BSc in Software Engineering<br>
+                            2020 – 2024</p>
+                    </div>
+                </div>
                 <a href="#contact" class="cta-btn">Let's Work Together</a>
-
-
             </section>
-        </main>
-    </div>
 
-    <section id="about">
-        <div class="about-container">
 
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I'm an aspiring full-stack developer passionate about building functional and visually appealing web
-                    applications. My journey into development started with HTML, CSS, and JavaScript, and I'm currently
-                    exploring frameworks like React for front-end and Node.js for back-end development.</p>
-                <p>I enjoy solving problems and continuously improving my skills by working on real-world projects.
-                    Right now, I'm focused on learning, building, and refining my coding skills through hands-on
-                    experience.</p>
-                <p>When I'm not coding, I like exploring design principles, improving user experiences, and staying
-                    updated on the latest tech trends. I'm always open to collaboration and new opportunities to grow in
-                    the field!</p>
-            </div>
 
-            <div class="image-container">
-                <img src="PIC3.jpg" alt="Profile picture of Millicent Anyango" class="styled-image">
-            </div>
-        </div>
-    </section>
+            <!-- About section -->
+            <section id="about">
+                <div class="about-container">
 
-    <section id="education">
-        <div class="education-container">
-            <h2>Education</h2>
-            <div class="education-entry">
-                <div class="edu-icon">
-                    <img src="KISII CAMPUS.jpeg" alt="Graduation Cap">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>
+                            I'm an aspiring <strong>Full-Stack Web Developer</strong> with a growing passion for
+                            <strong>Artificial Intelligence</strong> and <strong>Data Analysis</strong>. I believe in
+                            using technology to solve real-world problems and build meaningful digital experiences.
+                        </p>
+                        <p>
+                            My journey began with the foundations of HTML, CSS, and JavaScript, and I’ve since expanded
+                            my toolkit to include modern frameworks like <strong>React</strong> for front-end
+                            development and <strong>Node.js</strong> for back-end solutions. I'm currently exploring how
+                            data and AI can be harnessed to create smarter, more intuitive applications.
+                        </p>
+                        <p>
+                            Whether it's designing a seamless user interface or analyzing data to uncover insights, I
+                            enjoy challenges that push me to learn and grow. I'm actively building projects, refining my
+                            skills, and seeking out opportunities to collaborate with like-minded innovators.
+                        </p>
+                        <p>
+                            When I’m not coding, you’ll find me diving into design principles, exploring new tech
+                            trends, or studying machine learning models. Let’s build the future—one line of code at a
+                            time.
+                        </p>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="pictures/PIC3.jpg" alt="Profile picture of Millicent Anyango" class="styled-image">
+                    </div>
                 </div>
-                <div class="edu-text">
-                    <h3>Bachelor's Degree in Software Engineering</h3>
-                    <p>Kisii University, Kenya</p>
-                    <p>2019 - 2023</p>
-                </div>
-            </div>
+            </section>
 
-            <div class="education-entry">
-                <div class="edu-icon">
-                    <img src="PLP2.jpeg" alt="PLP">
-                </div>
+            <!-- Experience Section -->
+            <section id="experience" class="experience-section">
+                <h2>Experience</h2>
 
-                <div class="edu-text">
-                    <h3>Power Learn Project</h3>
-                    <p> Software Development</p>
-                    <p>2024-Ongoing</p>
-                </div>
-            </div>
+                <div class="experience-container">
+                    <div class="tab-buttons">
+                        <button class="tab active" onclick="showExperience(0)">Hekima Organization Tanzania</button>
+                        <button class="tab" onclick="showExperience(1)">Kisii Teaching and Referral Hospital</button>
+                    </div>
 
-            <div class="resume-container">
-                <a href="MILLICENT CV.pdf" class="resume-btn" download>Download Resume</a>
-            </div>
-        </div>
-    </section>
+                    <div class="tab-content">
+                        <div class="experience active">
+                            <h3>Web Developer Volunteer <span>@ Hekima Organisation, Tanzania</span></h3>
+                            <p class="date">April 2025 – Present</p>
+                            <ul>
+                                <li>Develop and maintain responsive websites and digital tools to support community
+                                    outreach and education programs.</li>
+                                <li>Contribute to data collection and visualization dashboards to improve
+                                    decision-making.</li>
+                                <li>Collaborate with a cross-functional team to design user-friendly web interfaces.
+                                </li>
+                                <li>Support internal training by mentoring junior volunteers and offering technical
+                                    guidance.</li>
+                            </ul>
+                        </div>
 
-    <section id="interests">
-        <div class="interests-container">
-            <h2>Interests</h2>
-
-            <div class="interests-list">
-                <div class="interest-item">
-                    <h3>Full-Stack Development</h3>
-                    <p>Building interactive and dynamic web applications from front-end to back-end.As I
-                        continue to
-                        learn full-stack development, I am already building web applications using both
-                        front-end and
-                        back-end technologies. <br>I am currently working with HTML, CSS, and JavaScript for
-                        front-end
-                        development, while exploring back-end technologies like Node.js and MongoDB.<br> Through
-                        hands-on experience, I’m honing my skills in responsive design and interactive web
-                        applications
-                        using the MERN stack, constantly improving with each project I work on.</p>
-                </div>
-
-                <div class="interest-item">
-                    <h3>UI/UX Design</h3>
-                    <p>I’m focused on learning how to create user-centered, intuitive, and visually appealing
-                        interfaces. <br>I’m diving into design principles, wireframing, prototyping, and user
-                        testing to
-                        understand how design impacts user experience. <br>I am using tools like Figma and Adobe
-                        XD to
-                        design responsive layouts and create seamless user experiences.</p>
-                </div>
-
-                <div class="interest-item">
-                    <h3>Data Analysis</h3>
-                    <p> Diving into data analysis to extract insights that drive decision-making.<br> By
-                        learning tools
-                        like Excel, Python, and SQL, I’m gaining the skills to clean, analyze, and visualize
-                        data.
-                        <br>My goal is to leverage data to solve problems, identify trends, and support business
-                        strategies with informed, data-driven decisions.
-                    </p>
-                </div>
-
-                <div class="interest-item">
-                    <h3>Entrepreneurship & Online Business</h3>
-                    <p>Passionate about entrepreneurship and building online businesses.<br> Currently, I'm
-                        exploring
-                        e-commerce, digital marketing, and using online platforms to grow businesses.<br> My
-                        focus is on
-                        creating value through innovative ideas and efficient models while <br>leveraging AI and
-                        data
-                        analytics to optimize my strategies for sustainable success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="projects-container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Smart To-Do-List web app</h3>
-                    <p>The Smart To-Do List is a sleek, interactive web application designed to help users manage their
-                        tasks efficiently.<br> With a clean and modern user interface, it provides a smooth experience
-                        for adding, editing, and deleting tasks. <br>Users can prioritize tasks, edit them on the go,
-                        and even mark them as completed, ensuring optimal productivity..</p>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                    <div class="project-links">
-                        <a href=" https://ocheingtodolist.netlify.app/" class="btn" target="_blank">View Project</a>
+                        <div class="experience">
+                            <h3>ICT Attachee <span>@ Kisii Teaching and Referral Hospital</span></h3>
+                            <p class="date">May 2023 – August 2023</p>
+                            <ul>
+                                <li>Supported the setup, configuration, and troubleshooting of hospital network systems.
+                                </li>
+                                <li>Delivered IT support for hardware, software, and networking issues.</li>
+                                <li>Assisted in system administration tasks such as user account management and data
+                                    backups.</li>
+                                <li>Installed and maintained hospital management systems and IT infrastructure.</li>
+                                <li>Collaborated with senior IT personnel to improve operational efficiency.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <h3>Bouncing Ball</h3>
-                    <p>This simple yet engaging web animation demonstrates the use of CSS and JavaScript to create a
-                        bouncing ball effect.<br> By leveraging CSS keyframes for the bounce animation and positioning
-                        the ball within a flexible layout, <br>the project highlights basic principles of animation,
-                        positioning, and user interaction.<br> The background is set to a dark theme, ensuring the
-                        ball’s motion and color contrast effectively with the page.<br> This project showcases my skills
-                        in CSS animations and creating dynamic, interactive user experiences.</p>
-                    <p><strong>Tech Stack:</strong> HTML,CSS,Javascript</p>
-                    <div class="project-links">
-                        <a href="https://ocheing.github.io/My-Bouncing-Ball/" class="btn" target="_blank">View
-                            project</a>
+                <!-- Resume Button -->
+                <div class="resume-btn-wrapper">
+                    <a href="Ocheing Millicent resume.pdf" download class="resume-btn">Download Resume</a>
+                </div>
+            </section>
+
+
+
+
+            <!-- Interest section -->
+            <section id="interests">
+                <div class="interests-container">
+                    <h2>Interests</h2>
+
+                    <div class="interests-list">
+                        <div class="interest-item">
+                            <h3>Full-Stack Development</h3>
+                            <p>Building interactive and dynamic web applications from front-end to back-end.As I
+                                continue to
+                                learn full-stack development, I am already building web applications using both
+                                front-end and
+                                back-end technologies. <br>I am currently working with HTML, CSS, and JavaScript for
+                                front-end
+                                development, while exploring back-end technologies like Node.js and MongoDB.<br> Through
+                                hands-on experience, I’m honing my skills in responsive design and interactive web
+                                applications
+                                using the MERN stack, constantly improving with each project I work on.</p>
+                        </div>
+
+                        <div class="interest-item">
+                            <h3>UI/UX Design</h3>
+                            <p>I’m focused on learning how to create user-centered, intuitive, and visually appealing
+                                interfaces. <br>I’m diving into design principles, wireframing, prototyping, and user
+                                testing to
+                                understand how design impacts user experience. <br>I am using tools like Figma and Adobe
+                                XD to
+                                design responsive layouts and create seamless user experiences.</p>
+                        </div>
+
+                        <div class="interest-item">
+                            <h3>Data Analysis</h3>
+                            <p> Diving into data analysis to extract insights that drive decision-making.<br> By
+                                learning tools
+                                like Excel, Python, and SQL, I’m gaining the skills to clean, analyze, and visualize
+                                data.
+                                <br>My goal is to leverage data to solve problems, identify trends, and support business
+                                strategies with informed, data-driven decisions.
+                            </p>
+                        </div>
+
+                        <div class="interest-item">
+                            <h3>Entrepreneurship & Online Business</h3>
+                            <p>Passionate about entrepreneurship and building online businesses.<br> Currently, I'm
+                                exploring
+                                e-commerce, digital marketing, and using online platforms to grow businesses.<br> My
+                                focus is on
+                                creating value through innovative ideas and efficient models while <br>leveraging AI and
+                                data
+                                analytics to optimize my strategies for sustainable success.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
+            <!-- Projects section -->
+            <section id="projects">
+                <div class="projects-container">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Smart To-Do-List web app</h3>
+                            <p>The Smart To-Do List is a sleek, interactive web application designed to help users
+                                manage their
+                                tasks efficiently.<br> With a clean and modern user interface, it provides a smooth
+                                experience
+                                for adding, editing, and deleting tasks. <br>Users can prioritize tasks, edit them on
+                                the go,
+                                and even mark them as completed, ensuring optimal productivity..</p>
+                            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                            <div class="project-links">
+                                <a href=" https://ocheingtodolist.netlify.app/" class="btn" target="_blank">Live
+                                    Demo</a>
+                            </div>
+                        </div>
 
+                        <div class="project-card">
+                            <h3>Kisii Teaching and Referral Hospital</h3>
+                            <p<p>
+                                The KTRH Website is a modern, responsive, and user-centered platform designed for Kisii
+                                Teaching and Referral Hospital.
+                                It showcases a clean layout built with HTML, CSS, and Bootstrap, reflecting both
+                                professionalism and accessibility.
+                                From animated headings and interactive sections to responsive design elements, the
+                                project demonstrates my ability to create functional and visually engaging web
+                                interfaces.
+                                This website serves not only as a digital presence for the hospital but also as a
+                                practical example of my front-end development and UI/UX design skills.
+                                </p>
 
-    <section id="contact">
-        <div class="contact-container">
-            <h2>Contact Me</h2>
-            <p>Have a question or want to work together? Feel free to reach out!</p>
+                                <p><strong>Tech Stack:</strong> HTML,CSS,Javascript</p>
+                                <div class="project-links">
+                                    <a href="http://127.0.0.1:5501/Health%20care%20website%20Bootstrap/index.html"
+                                        class="btn" target="_blank">Live
+                                        Demo</a>
+                                </div>
+                        </div>
 
-            <form action="https://formspree.io/f/xblgzrqj" method="POST">
+                        <div class="project-card">
+                            <h3>Crafty Portfolio</h3>
+                            <p>
+                                This UI portfolio website showcases my journey and skills as an aspiring full-stack web
+                                developer.
+                                Designed with a modern aesthetic and responsive layout, it highlights key sections such
+                                as About Me, Skills, Projects, Experience, and Contact.
+                                It also features interactive elements like animated text, dropdowns, and responsive
+                                cards to enhance user engagement.
+                                The site reflects my growing expertise in front-end development, clean UI/UX design, and
+                                passion for web technologies.
+                            </p>
+                            <p><strong>Tech Stack:</strong> HTML, CSS, Bootstrap, JavaScript</p>
 
-                <div class="input-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+                            <div class="project-links">
+                                <a href=" https://ocheing.github.io/plp-web-development-portfolio-group-assignment/ "
+                                    class="btn" target="_blank">Live
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
+            </section>
+
+            <!--Contact section -->
+
+            <section id="contact">
+                <div class="contact-container">
+                    <h2>Contact Me</h2>
+                    <p>Have a question or want to work together? Feel free to reach out!</p>
+
+                    <form action="https://formspree.io/f/xblgzrqj" method="POST">
+
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">Send Message</button>
+                    </form>
+
+                    <div class="contact-links">
+                        <p>Or connect with me on:</p>
+                        <a href="mailto:your@email.com">Email</a> |
+                        <a href="https://www.linkedin.com/in/millicent-anyango-b8b69b29b" target="_blank">LinkedIn</a> |
+                        <a href="https:/github.com/Ocheing" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="contact-btn">Send Message</button>
-            </form>
-
-            <div class="contact-links">
-                <p>Or connect with me on:</p>
-                <a href="mailto:your@email.com">Email</a> |
-                <a href="https://www.linkedin.com/in/millicent-anyango-b8b69b29b" target="_blank">LinkedIn</a> |
-                <a href="https:/github.com/Ocheing" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </section>
+            </section>
 
 
-
+            <script src="script.js"></script>
 
 </body>
 
