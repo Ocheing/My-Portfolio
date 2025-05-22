@@ -52,6 +52,26 @@ window.addEventListener('load', () => {
   }
 
 
+   document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        const targetTop = target.getBoundingClientRect().top + window.scrollY;
+        const targetHeight = target.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const offset = 0; // Adjust if you have a fixed header (e.g., use 60)
+
+        const scrollTo = targetTop - (windowHeight / 2) + (targetHeight / 2) - offset;
+        window.scrollTo({
+          top: scrollTo,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
 
 
 
