@@ -1,17 +1,21 @@
-//Animated words
+// Preloader Animation
 window.addEventListener('load', () => {
-    const preloader = document.querySelector('.container');
-    const homepageContent = document.querySelector('.homepage-content');
-  
+  const preloader = document.querySelector('.container');
+  const homepageContent = document.querySelector('.homepage-content');
+
+  // Only run if preloader exists (i.e. on index.html)
+  if (preloader && homepageContent) {
     setTimeout(() => {
       preloader.style.display = 'none';
       homepageContent.style.opacity = '1';
     }, 6000); // Matches the CSS animation duration
-  });
-  
-
-  
-  const words = document.querySelectorAll(".animated-word");
+  } else if (homepageContent) {
+    // For other pages: show content immediately
+    homepageContent.style.opacity = '1';
+  }
+});
+//hero section
+ const words = document.querySelectorAll(".animated-word");
   let current = 0;
 
   function showNextWord() {
