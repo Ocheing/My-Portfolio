@@ -572,7 +572,7 @@ nav ul li a:focus {
 #about {
     background-color: #000000;
     color: #ffffff;
-    padding: 80px 20px;
+    padding: 40px 20px 80px 20px;
     margin-top: 0px;
 }
 
@@ -594,7 +594,7 @@ nav ul li a:focus {
 
 .styled-image {
     width: 350px;
-    height: 350px;
+    height:450px;
     border-radius: 0;
     border: 4px solid transparent;
     object-fit: cover;
@@ -773,6 +773,22 @@ nav ul li a:focus {
     color: #0a192f;
 }
 
+.resume-link-wrapper {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.resume-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.resume-link:hover {
+    color: #0ef;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .experience-container {
@@ -851,7 +867,7 @@ nav ul li a:focus {
 
 .interest-item h3 {
     font-size: 1.25rem;
-    color: #00b4fc;
+    color: #64ffda;
     margin-bottom: 10px;
 }
 
@@ -907,7 +923,7 @@ nav ul li a:focus {
 }
 
 .project-card h3 {
-    color: #3B82F6;
+    color: #64ffda;
     font-size: 20px;
     /* Smaller title */
     margin-bottom: 10px;
